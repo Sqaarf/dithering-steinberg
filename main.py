@@ -2,6 +2,12 @@ import numpy as np
 from PIL import Image
 from tqdm import tqdm
 
+"""
+Made using Floyd–Steinberg dithering algorithm
+For more : https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering
+"""
+
+
 img = Image.open('./images/landscape.jpg')
 array = np.array(img)
 shape = array.shape
