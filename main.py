@@ -7,12 +7,20 @@ Made using Floyd–Steinberg dithering algorithm
 For more : https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering
 """
 
+def resize_image(img):
+	fixed_height = 200
+	height_percent = (fixed_height / float(img.size[1]))
+	width_size = int((float(img.size[0]) * float(height_percent)))
+	img = img.resize((width_size, fixed_height), Image.NEAREST)
+	return img
 
-img = Image.open('./images/landscape.jpg')
+
+imgName = input("Image name : ")
+img = resize_image(Image.open(f'./images/{imgName}.jpg'))
 array = np.array(img)
 shape = array.shape
 
-factor = int(input("Factor :"))
+factor = int(input("Factor : "))
 
 def quant_err(color, coeff, err):
 	c = color #The color of the pixel given in RGB format
