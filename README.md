@@ -7,11 +7,4 @@ Implementation in Python of Floyd-Steinberg's Dithering algorithm using PIL / Nu
 
 Before running <code>python ./main.py</code> be sure to install the libraries used in this repo
 
-Numpy :\
-<code>pip install numpy</code>
-
-PIL :\
-<code>pip install pillow</code>
-
-tqdm :\
-<code>pip install tqdm</code>
+<code>pip install -r ./requirements.txt</code>
